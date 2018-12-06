@@ -1,0 +1,63 @@
+<!-- box begin -->
+<div class="box alt">
+	<div class="left-top-corner">
+   	<div class="right-top-corner">
+      	<div class="border-top"></div>
+      </div>
+   </div>
+   <div class="border-left">
+   	<div class="border-right">
+      	<div class="inner">
+         	<div class="wrapper"><?php // Check for sales!
+
+// If records are returned, include the view:
+if (mysqli_num_rows($r) > 0) {
+	
+	echo '<dl class="special fright">
+		<dt><a href="/shop/sales/">Sale Items</a></dt>';
+
+	// Fetch each item:
+	while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
+		echo '<dd><a href="/shop/sales/#' . $row['sku'] . '" title="View This Product"><img alt="" src="/products/' . $row['image'] . '" /><span>' . $row['sale_price'] . '</span></a></dd>';
+	}
+	
+	echo '</dl>';
+
+} // End of mysqli_num_rows() IF.
+?>
+               <h2>Welcome to Life Escape</h2>
+               <p>Where you can leave your uneventful life behind and immerse yourself in amazing games!</p>
+         	</div>
+         </div>
+      </div>
+   </div>
+   <div class="left-bot-corner">
+   	<div class="right-bot-corner">
+      	<div class="border-bot"></div>
+      </div>
+   </div>
+</div>
+<!-- box end -->
+<!-- box begin -->
+<div class="box">
+	<div class="left-top-corner">
+   	<div class="right-top-corner">
+      	<div class="border-top"></div>
+      </div>
+   </div>
+   <div class="border-left">
+   	<div class="border-right">
+      	<div class="inner">
+         	<h3>About Life Escape, Inc.</h3>
+         	<p>Life Escape, Inc. has been selling gamese online since 2018..</p>
+         	<p>It's safe to shop here, promise!</p>
+      </div>	
+      </div>
+   </div>
+   <div class="left-bot-corner">
+   	<div class="right-bot-corner">
+      	<div class="border-bot"></div>
+      </div>
+   </div>
+</div>
+<!-- box end -->
